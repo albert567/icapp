@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class="um-win">
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/font-icons.css">
+		<link rel="stylesheet" href="css/iuapmobile.um.css">
+		<script src="js/jquery-2.1.4.min.js" ></script>
+		<script src="js/summer.js" ></script>
+		<script src="js/Frameworks/iuapmobile.frameworks.core.js" ></script>
+		<script src="js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="js/my.js" ></script>
+		<script src="js/index.js" ></script>
+		<style>
+			#main {
+				background: #256FEA;
+			}
+			.login {
+				background: #fff;
+				padding: 15px;
+				border-radius: 5px;
+				padding: 6%;
+			}
+			.login button.um-btn {
+				border-radius: 3px;
+				padding: 5px 12px;
+				border-color: #009BF5;
+				background: #009BF5;
+			}
+			.login p.title {
+				color: #00B3ED;
+			}
+			.login p.user {
+				color: #848484;
+			}
+			input.form-control {
+				border: none;
+				border-bottom: 1px solid #e3e3e5;
+			}
+			input.form-control:focus {
+				box-shadow: none;
+			}
+			.login .um-input-clear {
+				color: #fff;
+				background-color: #ddd;
+				padding: 4px;
+			}
+			.form-control:focus + .um-input-clear {
+				color: #fff;
+			}
+			.um-input-clear.ti-eye.eye {
+				color: #256FEA;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="um-page" id="index">
+			<div id="main" class="um-content p15 um-box-center um-row">
+				<div class="login um-xs-10 um-sm-6 um-md-4 um-lg-3">
+					<p class="title tc mb30 fb f24">
+						库存移动端
+					</p>
+					<p class="user f14">
+						用户名
+					</p>
+					<div class="pr">
+						<input type="text" id="user" class="form-control um-no-brs" placeholder=" ">
+						<span class="um-input-clear ti-close um-circle  f12"></span>
+					</div>
+					<p class="user f14 mt10">
+						密码
+					</p>
+					<div class="pr">
+						<input type="password" id="pwd" class="form-control um-no-brs" placeholder="">
+						<span class="um-input-clear ti-eye um-circle  f12 "></span>
+					</div>
+
+					<button class="um-btn mt30" onclick="return login();">
+						登录
+					</button>
+					<p class="tr mt10 f12">
+						<a href="javascript:void(0);" onclick="setting()">设置</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="um-page" id="setting">
+			<div class="um-header">
+				<a href="#" class="um-back" onclick="back()">返回</a>
+				<h3>设置</h3>
+				<a href="javascript:void(0);" class="um-header-right" onclick="save()">保存</a>
+			</div>
+			<div class="um-content">
+				<ul class="um-list">
+					<li>
+						<div class="um-list-item">
+							<div class="um-list-item-inner">
+								<span class="h pa um-box-vc um-red f20" style="margin-left:-10px;">*</span>
+								<div class="um-list-item-left">
+									服务器地址：
+								</div>
+								<div class="um-list-item-right">
+									<input type="text" class="form-control" id="server" placeholder="请输入服务器地址">
+								</div>
+							</div>
+							
+						</div>
+					</li>
+					<li>
+								<div class="um-list-item">
+									<div class="um-list-item-inner">
+										<span class="h pa um-box-vc um-red f20" style="margin-left:-10px;">*</span>
+										<div class="um-list-item-left">
+											数据源：
+										</div>
+										<div class="um-list-item-right">
+											<input type="text" class="form-control" id="dbsrc" placeholder="请输入数据源">
+										</div>
+									</div>
+								</div>
+							</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
